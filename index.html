@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
   
       <head>
           <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -124,31 +124,31 @@
                   
                   // Массив имён файлов .patt. Массив заполняется в порядке добавления маркеров
                   // если вместо .patt был добавлен баркод, на его место в массив добавляется пустая строка
-                  const patternNames = ["" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,""];
+                  const patternNames = ["" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,""];
                   // Maссив баркодов, заполняется одновременно с массивом паттернов
                   // если вместо баркода был добавлен .patt, на его место в массив добавляется -1
-                  const patternBarcode = [1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,16];
+                  const patternBarcode = [7 ,8 ,10 ,9 ,11 ,12 ,13 ,14 ,15 ,16];
                   // Массив типов контента для каждого маркера, заполняется значиями: изображение, модель, видео
-                  const modes = ["image" ,"image" ,"image" ,"image" ,"image" ,"image" ,"image" ,"image" ,"image" ,"image" ,"image" ,"image" ,"image" ,"image" ,"image" ,"image"];
+                  const modes = ["image" ,"image" ,"image" ,"image" ,"image" ,"image" ,"image" ,"image" ,"image" ,"image"];
                   // Массив файлов моделей, если нет модели будет добавлена пустая строка
-                  const modelFiles = ["" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,""];
+                  const modelFiles = ["" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,""];
                   // Массив файлов изображений, если нет изображения будет добавлена пустая строка
-                  const imageFiles = ["" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"0.png" ,"1.png" ,"2.png" ,"3.png" ,"4.png" ,"5.png"];
+                  const imageFiles = ["empty.png" ,"empty.png" ,"empty.png" ,"empty.png" ,"0.png" ,"1.png" ,"2.png" ,"3.png" ,"4.png" ,"5.png"];
                   // Массив файлов видео, если нет видео будет добавлена пустая строка
-                  const videoFiles = ["" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,""];
+                  const videoFiles = ["" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,""];
                   // Массив файлов аудио, если нет аудио будет добавлена пустая строка
-                  const audioFiles = ["Commit_Tuturu.mp3" ,"Commit_Tuturu.mp3" ,"Commit_Tuturu.mp3" ,"Commit_Tuturu.mp3" ,"Commit_Tuturu.mp3" ,"Commit_Tuturu.mp3" ,"GH dice.mp3" ,"Third Hand.mp3" ,"B.co..mp3" ,"Drozd.mp3" ,"" ,"" ,"" ,"" ,"" ,""];
+                  const audioFiles = ["GH dice.mp3" ,"Third Hand.mp3" ,"Drozd.mp3" ,"B.co..mp3" ,"" ,"" ,"" ,"" ,"" ,""];
                   // Массив опций повтора аудио и видео контента, по дефолту для всех будет false
-                  const repeatOptions = ["false" ,"false" ,"false" ,"false" ,"false" ,"false" ,"false" ,"false" ,"false" ,"false" ,"false" ,"false" ,"false" ,"false" ,"false" ,"false"];
+                  const repeatOptions = ["false" ,"false" ,"false" ,"false" ,"false" ,"false" ,"false" ,"false" ,"false" ,"false"];
   
                   // Создаём массив для всех маркеров
                   const markerRoots = [];
-                  for (let i = 0; i < 16; i++) {
+                  for (let i = 0; i < 10; i++) {
                         markerRoots[i] = new THREE.Group();
                   }
   
                   // Проходимся по каждому маркеру из массива и добавляем его в главный контейнер 
-                  for (let i = 0; i < 16; i++) {
+                  for (let i = 0; i < 10; i++) {
                     mainContainer.add(markerRoots[i]);
 
                     // Если текущий маркер это баркод, создаём AR контроллер под баркод
@@ -380,4 +380,3 @@
     </body>
     
     </html>
-  
